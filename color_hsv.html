@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="range" min="0" max="359" value="50" class="slider" id="H"  oninput="change()" onchange="change()">
+    <input type="range" min="0" max="100" value="50" class="slider" id="S"  oninput="change()" onchange="change()">
+    <input type="range" min="0" max="100" value="50" class="slider" id="V"  oninput="change()" onchange="change()">
+    <script type="text/javascript">
+        var body = document.getElementsByTagName("body")[0];
+        body.style.backgroundColor="hsv(0,0,0)";
+        function change()
+        {
+            var h,s,v;
+            h = document.getElementById("H").value;
+            s = document.getElementById("S").value;
+            v = document.getElementById("V").value;
+
+            var body = document.getElementsByTagName("body")[0];
+            body.style.backgroundColor="hsl("+h+","+s+"%,"+v+"%)";
+        }
+
+    </script>
+</body>
+</html>
